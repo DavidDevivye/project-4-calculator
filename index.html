@@ -13,13 +13,39 @@
   </head>  
   <body>
     <div class="wrapper">
-        <section class="calculator-screen">
-
-        </section>
-    
-        <section class="calculator-buttons">
- 
-        </section>
+      <section class="calculator-screen">
+           <div id="screen"></div>
+      </section>
+      <section class="calculator-buttons">
+        <div class="button-row">
+          <button class="btn btn-func clear-btn" data-action="clear">C</button>
+          <button class="btn btn-func" data-action="back">&#8592;</button>
+          <button class="btn btn-op" data-action="divide">&divide;</button>
+        </div>
+        <div class="button-row">
+          <button class="btn" data-num="7">7</button>
+          <button class="btn" data-num="8">8</button>
+          <button class="btn" data-num="9">9</button>
+          <button class="btn btn-op" data-action="multiply">&times;</button>
+        </div>
+        <div class="button-row">
+          <button class="btn" data-num="4">4</button>
+          <button class="btn" data-num="5">5</button>
+          <button class="btn" data-num="6">6</button>
+          <button class="btn btn-op" data-action="subtract">&minus;</button>
+        </div>
+        <div class="button-row">
+          <button class="btn" data-num="1">1</button>
+          <button class="btn" data-num="2">2</button>
+          <button class="btn" data-num="3">3</button>
+          <button class="btn btn-op" data-action="add">+</button>
+        </div>
+        <div class="button-row">
+          <button class="btn zero" data-num="0">0</button>
+          <button class="btn btn-op" data-action="equals">=</button>
+        </div>
+      </section>
     </div>
-  </body>
+    </body>
+    <script src="script.js"></script>
 </html>

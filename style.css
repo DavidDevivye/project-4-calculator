@@ -7,7 +7,111 @@ html {
 body {
   padding: 0;
   margin: 0;
+  background: #fff;
+  font-family: Arial, sans-serif;
 }
 .wrapper {
     width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+}
+.calculator-screen {
+    background: #111;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #222;
+}
+#screen {
+    width: 100%;
+    text-align: right;
+    font-size: 2.2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-height: 1.2em;
+}
+.clear-btn {
+    grid-column: span 2;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 0;
+}
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.button-row:last-child {
+    grid-template-columns: 2fr 1fr 1fr 0fr;
+}
+.btn {
+    border: 1px solid #222;
+    background: #d3d3d3;
+    font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.btn:active {
+    background: #b0b0b0 !important;
+}
+.btn:hover {
+    background: #c0c0c0;
+}
+.btn-op {
+    background: #d68b3c;
+    color: #fff;
+    border-left: 2px solid #fff;
+}
+.btn-op:active {
+    background: #b36c1c;
+}
+.btn-op:hover {
+    background: #e09c54;
+}
+.btn-func {
+    color: #222;
+    font-weight: bold;
+}
+.btn.zero {
+    grid-column: span 2;
+}
+.button-row:last-child .btn.zero {
+    border-right: 1px solid #222;
+}
+.button-row:last-child .btn-op {
+    grid-column: 3 / 5;
+}
+@media (max-width: 420px) {
+    .wrapper {
+        width: 100vw;
+        min-width: 0;
+    }
+    .calculator-screen {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    .btn {
+        font-size: 1.5rem;
+        height: 48px;
+    }
+    .calculator-buttons {
+        grid-template-rows: repeat(5, 48px);
+    }
 }
